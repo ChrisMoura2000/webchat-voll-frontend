@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="icon-whatsApp.png" type="image/ico" /> -->
+    <link rel="icon" href="icovoll.png" type="image/ico" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Webchat Voll</title>
+</head>
+<body>
+    <div id="app" class="app">
+        <div class="active-users">
+            <input type="text" id="nickname" placeholder="Nickname" autofocus>
+            <button type="button" id="btn-save">Salvar</button>
+            <h3>Active users</h3>
+            <ul v-for="user in onlineUsers">
+                <li>{{ user.name }}</li>
+            </ul>
+        </div>
+
+        <div class="chat">
+            <div v-for="message in messages":class="{myMessage: message.itsMe}">
+                <p>
+                    {{ message.message }}
+                </p>
+                <span>
+                    {{ message.nickname }} {{ message.time }}
+                </span>
+            </div>
+            <p class="user-typing">{{ typing }}</p>
+        </div>
+    </div>
+    <div class="typing-area">
+        <input type="text" placeholder="Type a message" id="input-mgs">
+        <button type="button" id="btn-send">Enviar</button>
+    </div>
+</body>
+<script src="https://cdn.socket.io/4.4.1/socket.io.min.js" integrity="sha384-fKnu0iswBIqkjxrhQCTZ7qlLHOFEgNkRmK2vaO/LbTZSXdJfAu6ewRBdwHPhBo/H" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</html>

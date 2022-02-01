@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.active-users {
+    border: 2px solid green;
+    width: 30%;
+    height: 85vh;
+}
+
+.chat {
+    border: 2px solid black;
+    width: 70%;
+    overflow: auto;
+    height: 85vh;
+}
+
+.app {
+    display: flex;
+}
+
+.chat p {
+    font-size: 20px;
+    margin-bottom: 0;
+    background-color: lightgray;
+}
+
+.myMessage {
+    text-align: right;
+    padding-right: 1%;
+}
+
+.myMessage p {
+    background-color: lightgreen;
+}
+
+.chat span {
+    font-size: 14px;
+}
+
+.typing-area input{
+    width: 90%;
+    height: 10vh;
+}
+
+.typing-area button {
+    width: 8%;
+    height: 10vh;
+    background-color: rgb(74, 151, 74);
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.chat .user-typing {
+    background-color: white;
+    font-size: 16px;
+    font-style: italic;
+}
