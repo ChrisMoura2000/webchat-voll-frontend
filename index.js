@@ -42,6 +42,7 @@ const socketOn = {
       delete payload.nickname;
     }
     app.messages.push(payload);
+    chat.scrollTop = chat.scrollHeight;
   },
   typing: ({ user }) => {
     if (user.id !== socket.id) {
@@ -77,7 +78,6 @@ function sendMessage() {
   });
 
   socket.emit("message", { message: textMsg, nickname: user.name });
-  chat.scrollTop = chat.scrollHeight;
   inputMsg.value = "";
 }
 
