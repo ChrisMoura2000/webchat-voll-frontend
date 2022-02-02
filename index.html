@@ -17,11 +17,11 @@
             <button type="button" id="btn-save">Salvar</button>
             <h3>Active users</h3>
             <ul v-for="user in onlineUsers">
-                <li>{{ user.name }}</li>
+                <li class="nick-user">{{ user.name }}</li>
             </ul>
         </div>
 
-        <div class="chat">
+        <div id="chat" class="chat">
             <div v-for="message in messages":class="{myMessage: message.itsMe}">
                 <p>
                     {{ message.message }}

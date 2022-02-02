@@ -5,9 +5,18 @@ body {
 }
 
 .active-users {
-    border: 2px solid green;
+    border: 2px solid gray;
+    background-color: rgba(233, 233, 233, 0.705);
     width: 30%;
     height: 85vh;
+}
+
+.active-users h3 {
+    border-bottom: 2px solid rgb(138, 138, 138);
+}
+
+.nick-user {
+    color: green;
 }
 
 .chat {
