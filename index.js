@@ -7,8 +7,7 @@ var app = new Vue({
   },
 });
 
-// const URL_API = "https://webchat-voll-backend.herokuapp.com/";
-const URL_API = "http://localhost:3000";
+const URL_API = "https://webchat-voll-backend.herokuapp.com/";
 
 const socket = io(URL_API);
 
